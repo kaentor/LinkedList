@@ -1,0 +1,23 @@
+{
+  "name": "LinkedList",
+  "version": "1.0.0",
+  "description": "A single linked list implementation in JavaScript.",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint --config .eslint.json **/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kaentor/LinkedList.git"
+  },
+  "keywords": [],
+  "author": "Kyo <@kyoeuler>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kaentor/LinkedList/issues"
+  },
+  "homepage": "https://github.com/kaentor/LinkedList#readme",
+  "devDependencies": {
+    "eslint": "^6.8.0"
+  }
+}
