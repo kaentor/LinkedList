@@ -4,7 +4,13 @@
   "description": "A single linked list implementation in JavaScript.",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint --config .eslint.json **/*.js"
+    "lint": "eslint --config .eslint.json **/*.js",
+    "test": "npm run lint"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm t"
+    }
   },
   "repository": {
     "type": "git",
@@ -18,6 +24,7 @@
   },
   "homepage": "https://github.com/kaentor/LinkedList#readme",
   "devDependencies": {
-    "eslint": "^6.8.0"
+    "eslint": "^6.8.0",
+    "husky": "^4.2.5"
   }
 }
