@@ -4,14 +4,20 @@
   "description": "A single linked list implementation in JavaScript.",
   "main": "index.js",
   "scripts": {
+    "coverage": "nyc --reporter=lcov --reporter=html --reporter=text-summary",
     "lint": "eslint --config .eslint.json **/*.js",
     "pretest": "npm run lint",
-    "test": "mocha tests/**.js --require @babel/register"
+    "test": "npm run -s coverage -- mocha tests/**.js --require @babel/register"
   },
   "husky": {
     "hooks": {
       "pre-commit": "npm t"
     }
+  },
+  "nyc": {
+    "exclude": [
+      "tests/"
+    ]
   },
   "repository": {
     "type": "git",
@@ -32,6 +38,7 @@
     "chai": "^4.2.0",
     "eslint": "^6.8.0",
     "husky": "^4.2.5",
-    "mocha": "^7.1.1"
+    "mocha": "^7.1.1",
+    "nyc": "^15.0.1"
   }
 }
