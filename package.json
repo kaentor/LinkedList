@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint --config .eslint.json **/*.js",
+    "pretest": "npm run lint",
     "test": "mocha tests/**.js --require @babel/register"
   },
   "husky": {
