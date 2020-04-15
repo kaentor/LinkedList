@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint --config .eslint.json **/*.js",
-    "test": "npm run lint"
+    "test": "mocha tests/**.js"
   },
   "husky": {
     "hooks": {
@@ -26,7 +26,9 @@
   "devDependencies": {
     "@babel/cli": "^7.8.4",
     "@babel/preset-env": "^7.9.5",
+    "chai": "^4.2.0",
     "eslint": "^6.8.0",
-    "husky": "^4.2.5"
+    "husky": "^4.2.5",
+    "mocha": "^7.1.1"
   }
 }
