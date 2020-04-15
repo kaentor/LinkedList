@@ -10,3 +10,6 @@ jobs:
     - name: 'Lint'
       script:
         - npm run lint
+    - name: 'Unit Tests'
+      script:
+        - npm t
