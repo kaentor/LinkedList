@@ -1,0 +1,10 @@
+comment: false
+
+coverage:
+  status:
+    project:
+      default:
+        if_not_found: success
+    patch:
+      default:
+        if_not_found: success

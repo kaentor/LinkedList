@@ -13,3 +13,6 @@ jobs:
     - name: 'Unit Tests'
       script:
         - npm t
+
+after_success:
+  - npm run codecov
