@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint --config .eslint.json **/*.js",
-    "test": "mocha tests/**.js"
+    "test": "mocha tests/**.js --require @babel/register"
   },
   "husky": {
     "hooks": {
@@ -25,7 +25,9 @@
   "homepage": "https://github.com/kaentor/LinkedList#readme",
   "devDependencies": {
     "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
     "@babel/preset-env": "^7.9.5",
+    "@babel/register": "^7.9.0",
     "chai": "^4.2.0",
     "eslint": "^6.8.0",
     "husky": "^4.2.5",

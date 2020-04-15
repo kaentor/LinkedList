@@ -1,8 +1,8 @@
-const expect = require('chai').expect;
-const author = require('../src/index');
+import { expect } from 'chai';
+import author from '../src/index';
 
-describe('@kaentor/LinkedList', function() {
-  it('A single linked list implementation in JavaScript', function() {
+describe('@kaentor/LinkedList', () => {
+  it('A single linked list implementation in JavaScript', () => {
     const actual = author.username;
     const expected = 'kyoeuler';
 
