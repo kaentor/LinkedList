@@ -1,11 +1,18 @@
 import { expect } from 'chai';
-import author from '../src/index';
+import LinkedList from '../src';
 
 describe('@kaentor/LinkedList', () => {
   it('A single linked list implementation in JavaScript', () => {
-    const actual = author.username;
-    const expected = 'kyoeuler';
+    expect(true).to.equal(true);
+  });
+});
 
-    expect(actual).to.equal(expected);
+
+describe('@kaentor/LinkedList :: Instance', () => {
+  it('can be constructed and used as an object', () => {
+    const list = new LinkedList();
+    list.aProperty = 1;
+
+    expect(list.aProperty).to.equal(1);
   });
 });

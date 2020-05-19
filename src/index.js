@@ -1,3 +1,3 @@
-export default {
-  username: 'kyoeuler'
-};
+class LinkedList {}
+
+export default LinkedList;
