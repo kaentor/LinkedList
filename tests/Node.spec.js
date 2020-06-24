@@ -21,5 +21,14 @@ describe('@kaentor/LinkedList :: Node', () => {
 
     expect(node.data.key).to.equal(1);
     expect(node.data.value).to.equal('OBJECT');
+    expect(node.next).to.be.null;
+  });
+
+  it('can link two nodes together', () => {
+    const first = new Node(10);
+    first.next = new Node(20);
+
+    expect(first.data).to.equal(10);
+    expect(first.next.data).to.equal(20);
   });
 });
