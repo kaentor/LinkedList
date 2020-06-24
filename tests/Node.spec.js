@@ -25,10 +25,29 @@ describe('@kaentor/LinkedList :: Node', () => {
   });
 
   it('can link two nodes together', () => {
-    const first = new Node(10);
-    first.next = new Node(20);
+    const first = new Node(1);
+    first.next = new Node(2);
 
-    expect(first.data).to.equal(10);
-    expect(first.next.data).to.equal(20);
+    expect(first.data).to.equal(1);
+    expect(first.next.data).to.equal(2);
+    expect(first.next.next).to.be.null;
+  });
+
+  it('can link three nodes together', () => {
+    const first = new Node(1);
+    const second = new Node(2);
+    const third = new Node(3);
+
+    first.next = second;
+    second.next = third;
+
+    expect(first.data).to.equal(1);
+    expect(first.next).to.be.not.null;
+    expect(second.data).to.equal(2);
+    expect(second.next).to.be.not.null;
+    expect(third.data).to.equal(3);
+    expect(third.next).to.be.null;
+
+    expect(first.next.next.next).to.be.null;
   });
 });
