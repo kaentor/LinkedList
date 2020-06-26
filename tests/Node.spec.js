@@ -50,4 +50,14 @@ describe('@kaentor/LinkedList :: Node', () => {
 
     expect(first.next.next.next).to.be.null;
   });
+
+  it('can return the corresponding value type', () => {
+    const string = new Node('K');
+    const number = new Node(1);
+    const object = new Node({ value: 1 });
+
+    expect(string.dtype).to.equal('string');
+    expect(number.dtype).to.equal('number');
+    expect(object.dtype).to.equal('object');
+  });
 });
