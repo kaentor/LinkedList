@@ -7,12 +7,17 @@ describe('@kaentor/LinkedList', () => {
   });
 });
 
-
 describe('@kaentor/LinkedList :: Instance', () => {
   it('can be constructed and used as an object', () => {
-    const list = new LinkedList();
-    list.aProperty = 1;
+    const ll = new LinkedList();
+    ll.aProperty = 1;
 
-    expect(list.aProperty).to.equal(1);
+    expect(ll.aProperty).to.equal(1);
+  });
+
+  it('can create an empty linked list', () => {
+    const ll = new LinkedList();
+
+    expect(ll.head).to.be.null;
   });
 });
