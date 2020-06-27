@@ -51,7 +51,13 @@ describe('@kaentor/LinkedList :: Node', () => {
     expect(first.next.next.next).to.be.null;
   });
 
-  it('can return the corresponding value type', () => {
+  it('can return the datatype as a string value', () => {
+    const node = new Node(1);
+
+    expect(node.dtype).to.be.a('string');
+  });
+
+  it('can return the corresponding datatype', () => {
     const string = new Node('K');
     const number = new Node(1);
     const object = new Node({ value: 1 });
