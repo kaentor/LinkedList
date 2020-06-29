@@ -1,4 +1,5 @@
 import { expect } from 'chai';
+import Node from '../src/Node';
 import LinkedList from '../src';
 
 describe('@kaentor/LinkedList', () => {
@@ -18,6 +19,18 @@ describe('@kaentor/LinkedList', () => {
       const ll = new LinkedList();
 
       expect(ll.head).to.be.null;
+    });
+  });
+
+  describe('add()', () => {
+    it('can create nodes from `Node` class', () => {
+      const ll = new LinkedList();
+
+      ll.add(1);
+
+      expect(ll.head).to.be.instanceof(Node);
+      expect(ll.head.data).to.equal(1);
+      expect(ll.head.next).to.be.null;
     });
   });
 });
