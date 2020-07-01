@@ -19,6 +19,7 @@ describe('@kaentor/LinkedList', () => {
       const ll = new LinkedList();
 
       expect(ll.head).to.be.null;
+      expect(ll.tail).to.be.null;
     });
   });
 
@@ -28,9 +29,23 @@ describe('@kaentor/LinkedList', () => {
 
       ll.add(1);
 
-      expect(ll.head).to.be.instanceof(Node);
-      expect(ll.head.data).to.equal(1);
-      expect(ll.head.next).to.be.null;
+      expect(ll.tail).to.be.instanceof(Node);
+    });
+
+    it('can insert a node at the end', () => {
+      const ll = new LinkedList();
+
+      ll.add(0);
+      expect(ll.tail.data).to.equal(0);
+      expect(ll.head.data).to.equal(0);
+
+      ll.add(1);
+      expect(ll.tail.data).to.equal(1);
+      expect(ll.head.data).to.equal(0);
+
+      ll.add(2);
+      expect(ll.tail.data).to.equal(2);
+      expect(ll.head.data).to.equal(0);
     });
   });
 });
