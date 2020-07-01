@@ -47,5 +47,21 @@ describe('@kaentor/LinkedList', () => {
       expect(ll.tail.data).to.equal(2);
       expect(ll.head.data).to.equal(0);
     });
+
+    it('can insert a node at the start', () => {
+      const ll = new LinkedList();
+
+      ll.addFirst(2);
+      expect(ll.head.data).to.equal(2);
+      expect(ll.tail.data).to.equal(2);
+
+      ll.addFirst(1);
+      expect(ll.head.data).to.equal(1);
+      expect(ll.tail.data).to.equal(2);
+
+      ll.addFirst(0);
+      expect(ll.head.data).to.equal(0);
+      expect(ll.tail.data).to.equal(2);
+    });
   });
 });
