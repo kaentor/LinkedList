@@ -23,11 +23,11 @@ describe('@kaentor/LinkedList', () => {
     });
   });
 
-  describe('add()', () => {
+  describe('add', () => {
     it('can create nodes from `Node` class', () => {
       const ll = new LinkedList();
 
-      ll.add(1);
+      ll.append(1);
 
       expect(ll.tail).to.be.instanceof(Node);
     });
@@ -35,15 +35,15 @@ describe('@kaentor/LinkedList', () => {
     it('can insert a node at the end', () => {
       const ll = new LinkedList();
 
-      ll.add(0);
+      ll.append(0);
       expect(ll.tail.data).to.equal(0);
       expect(ll.head.data).to.equal(0);
 
-      ll.add(1);
+      ll.append(1);
       expect(ll.tail.data).to.equal(1);
       expect(ll.head.data).to.equal(0);
 
-      ll.add(2);
+      ll.append(2);
       expect(ll.tail.data).to.equal(2);
       expect(ll.head.data).to.equal(0);
     });
@@ -51,15 +51,15 @@ describe('@kaentor/LinkedList', () => {
     it('can insert a node at the start', () => {
       const ll = new LinkedList();
 
-      ll.addFirst(2);
+      ll.prepend(2);
       expect(ll.head.data).to.equal(2);
       expect(ll.tail.data).to.equal(2);
 
-      ll.addFirst(1);
+      ll.prepend(1);
       expect(ll.head.data).to.equal(1);
       expect(ll.tail.data).to.equal(2);
 
-      ll.addFirst(0);
+      ll.prepend(0);
       expect(ll.head.data).to.equal(0);
       expect(ll.tail.data).to.equal(2);
     });

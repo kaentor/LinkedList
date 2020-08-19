@@ -6,7 +6,7 @@ class LinkedList {
     this.tail = null;
   }
 
-  add(data) {
+  append(data) {
     const node = new Node(data);
 
     if (this.tail !== null) {
@@ -18,7 +18,7 @@ class LinkedList {
     }
   }
 
-  addFirst(data) {
+  prepend(data) {
     const node = new Node(data);
 
     if (this.head !== null) {
